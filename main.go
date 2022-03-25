@@ -3,6 +3,7 @@ package main
 import (
 	"book_donation/controllers"
 	"book_donation/models"
+	"os"
 
 	"github.com/gin-gonic/gin"
 )
@@ -18,6 +19,6 @@ func main() {
 	public.POST("/register", controllers.Register)
 	public.POST("/login",controllers.Login)
 
-	r.Run(":8000")
+	r.Run(":" + os.Getenv("PORT"))
 
 }

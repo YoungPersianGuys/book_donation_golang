@@ -7,13 +7,14 @@ import (
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"github.com/joho/godotenv"
 )
 
 var DB *gorm.DB
 
 func ConnectDataBase(){
 
-	// err := godotenv.Load(".env")
+	err := godotenv.Load(".env")
 
 	// if err != nil {
 	//   log.Fatalf("Error loading .env file")
